@@ -11,7 +11,7 @@ function new_error(ms){
 
 //获取URL参数
 const urlParams = new URLSearchParams(window.location.search);
-let filename = urlParams.get('name'); // 用 let 替换 const
+let filename = urlParams.get('name'); 
 if (!filename){
     const pathMatch = window.location.pathname.match(/\/law\/([^\/\?]+)/);
     if (pathMatch && pathMatch[1]) {
@@ -21,4 +21,4 @@ if (!filename){
         new_error("路径或参数不正确");
     }
 }
-console.log("文件名：".filename)
+console.log("文件名：", filename);
