@@ -44,4 +44,5 @@ if(filename == 'index.html' || filename == 'name' || filename == ':name'){
 }
 console.log("文件名：", filename);
 name_url.textContent = filename;
-fetchMarkdown(`${filename}/README.md`)
+const filemarkdown =  fetchMarkdown(`${filename}/README.md`);
+console.log(fetchMarkdown);
