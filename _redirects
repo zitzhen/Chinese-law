@@ -1,0 +1,4 @@
+# _redirects 文件
+/law/?name=:name    /law/:name   301
+/law/:name    /law/?name=:name   200
+/law/:name/   /law/:name   301
