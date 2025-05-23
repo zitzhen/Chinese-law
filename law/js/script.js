@@ -1,7 +1,8 @@
 const law_detail_container =document.getElementById("law_detail_container");
 const law_main_content = document.getElementById("law_main_content");
 const error_ms_1 = document.getElementById("error_ms_1");
-const error_windows =document.getElementById("error_windows")
+const error_windows =document.getElementById("error_windows");
+const name_url = document.getElementById("name_url")
 
 function new_error(ms){
     law_detail_container.style.display = 'none';
@@ -22,3 +23,4 @@ if (!filename){
     }
 }
 console.log("文件名：", filename);
+name_url.textContent = filename;
