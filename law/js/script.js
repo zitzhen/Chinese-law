@@ -11,7 +11,7 @@ function new_error(ms){
 
 //获取URL参数
 const urlParams = new URLSearchParams(window.location.search);
-const filename = urlParams.get('name');
+let filename = urlParams.get('name'); // 用 let 替换 const
 if (!filename){
     const pathMatch = window.location.pathname.match(/\/law\/([^\/\?]+)/);
     if (pathMatch && pathMatch[1]) {
