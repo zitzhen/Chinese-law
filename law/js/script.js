@@ -22,5 +22,8 @@ if (!filename){
         new_error("路径或参数不正确");
     }
 }
+if(filename == 'index.html' || filename == 'name' || filename == ':name'){
+    new_error("路径或参数不正确");
+}
 console.log("文件名：", filename);
 name_url.textContent = filename;
