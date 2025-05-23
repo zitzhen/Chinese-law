@@ -13,5 +13,12 @@ function new_error(ms){
 const urlParams = new URLSearchParams(window.location.search);
 const filename = urlParams.get('name');
 if (!filename){
-    new_error("路径或参数不正确");
+    const pathMatch = window.location.pathname.match(/\/law\/([^\/\?]+)/);
+    if (pathMatch && pathMatch[1]) {
+        filename = decodeURIComponent(pathMatch[1]);
+    }
+    else{
+        new_error("路径或参数不正确");
+    }
 }
+console.log("文件名：".filename)
