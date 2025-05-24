@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/error.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../css/Loading.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 <div class="progress-container" id="Loading">
@@ -54,25 +55,20 @@
             </div>
             </div>
             </div>
-        </div>
+        </div></div>
 
 
         <div class="law-detail-container" id="law_detail_container">
             <div class="law-main-content" id="law_main_content">
-                <h2 class="law-title">正在加载</h2>
-                
+                <h2 class="law-title" id="law_name">正在加载</h2>
                 <div class="law-meta">
                     <div class="meta-item">
                         <i class="fas fa-calendar-alt"></i>
-                        <span>颁布日期：正在加载</span>
+                        <span id="promulgate">颁布日期：正在加载</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-calendar-check"></i>
                         <span>实施日期：正在加载</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-file-alt"></i>
-                        <span>发文字号：正在加载</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-layer-group"></i>
@@ -83,7 +79,7 @@
                         <span>时效性：正在加载</span>
                     </div>
                 </div>
-                
+                    <div id="law_content"></div>
             </div>
             
             <div class="law-sidebar">
@@ -97,19 +93,17 @@
                 <div class="sidebar-card">
                     <h3 class="sidebar-title">司法解释</h3>
                     <ul class="related-laws">
-                        <li><a href="#">最高人民法院关于适用《正在加载》时间效力的若干规定</a></li>
-                        <li><a href="#">最高人民法院关于审理民事案件适用诉讼时效制度若干问题的规定</a></li>
-                        <li><a href="#">最高人民法院关于审理买卖合同纠纷案件适用法律问题的解释</a></li>
+                        <p>暂无</p>
                     </ul>
                 </div>
                 
                 <div class="sidebar-card">
                     <h3 class="sidebar-title">下载文档</h3>
                     <p>下载本法律全文：</p>
-                    <a href="#" class="download-btn">
+                    <a href="#" download class="download-btn" id="pdf_download" >
                         <i class="fas fa-download"></i> PDF版本下载
                     </a>
-                    <a href="#" class="download-btn">
+                    <a href="#" download class="download-btn" id="md_download">
                         <i class="fas fa-download"></i> MD版本下载
                     </a>
                 </div>
