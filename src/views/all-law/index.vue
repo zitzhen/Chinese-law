@@ -85,6 +85,7 @@
                 </thead>
                 <tbody id="legal_page">
                     <!--在此插入-->
+                    <div v-html="htmlContent"></div>
                     <p>请稍后，我们正在处理</p>
                 </tbody>
             </table>
@@ -127,7 +128,7 @@
                 <a href="#">法律声明</a>
                 <a href="#">帮助中心</a>
             </div>
-            <p class="copyright">© 2023 中国现行法律查询系统 版权所有 | 主管单位：中华人民共和国司法部</p>
+            <p class="copyright">2025 ZIT小圳创科工作室·中国现行法律查询系统 版权所有</p>
         </div>
     </footer>
 </body>
