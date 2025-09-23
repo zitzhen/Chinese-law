@@ -4,6 +4,7 @@
   "description": "Chinese-law，全称为ZIT-Chinese-law，提供 中华人民共和国 所有法律的查询，目前正在收入中，未来开发网页以供访问",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
