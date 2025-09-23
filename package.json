@@ -1,0 +1,25 @@
+{
+  "name": "chinese-law",
+  "version": "1.0.0",
+  "description": "Chinese-law，全称为ZIT-Chinese-law，提供 中华人民共和国 所有法律的查询，目前正在收入中，未来开发网页以供访问",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zitzhen/Chinese-law.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zitzhen/Chinese-law/issues"
+  },
+  "homepage": "https://github.com/zitzhen/Chinese-law#readme",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.7",
+    "vue": "^3.5.21"
+  }
+}
