@@ -133,3 +133,7 @@ export default {
   name: 'Home'
 }
 </script>
+
+<style>
+@import '@/resource/style/style.css';
+</style>
