@@ -237,7 +237,8 @@ export default {
             const infoResponse = await fetch(`https://api.github.com/repos/zitzhen/Chinese-law/contents/${folder.path}/information.json`)
             if (infoResponse.ok) {
               const infoData = await infoResponse.json()
-              const infoContent = atob(infoData.content) // 解码 base64
+              // 正确解码 base64 内容
+              const infoContent = atob(infoData.content)
               const lawInfo = JSON.parse(infoContent)
               
               // 从文件夹名称中提取法律名称
