@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <header>
       <div class="container header-content">
         <div class="logo">
@@ -127,3 +127,9 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'Home'
+}
+</script>
