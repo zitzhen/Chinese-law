@@ -132,3 +132,7 @@
     </footer>
 </body>
 </template>
+
+<style>
+@import '@/resource/style/all-law/style.css';
+</style>
