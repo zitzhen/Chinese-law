@@ -1,0 +1,170 @@
+@import '@/resource/style/style.css';
+@import '@/resource/style/all-law/style.css';
+@import '../../../../css/Loading.css';
+@import '../../../../law/css/error.css';
+
+.law-detail-container {
+  display: flex;
+  gap: 30px;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.law-main-content {
+  flex: 3;
+  background-color: white;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.law-sidebar {
+  flex: 1;
+  position: sticky;
+  top: 24px;
+}
+
+.law-title {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.law-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.meta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #f8e7e5;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.sidebar-card {
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.sidebar-title {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.related-laws li {
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.related-laws li:last-child {
+  border-bottom: none;
+}
+
+.related-laws a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.related-laws a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.download-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.markdown-body {
+  color: var(--text-color);
+  line-height: 1.9;
+  word-break: break-word;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: var(--primary-dark);
+  margin: 1.6rem 0 1rem;
+  line-height: 1.4;
+}
+
+.markdown-body h1 {
+  font-size: 1.8rem;
+}
+
+.markdown-body h2 {
+  font-size: 1.45rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.2rem;
+}
+
+.markdown-body p {
+  margin-bottom: 0.8rem;
+  text-indent: 2em;
+}
+
+.markdown-body a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.notifications-container {
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .law-detail-container {
+    flex-direction: column;
+  }
+
+  .law-sidebar {
+    position: static;
+    width: 100%;
+  }
+}
