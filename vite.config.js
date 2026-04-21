@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     watch: {
+      usePolling: true,
+      interval: 1000,
       ignored: ['**/dist/**', '**/law/**/*.pdf', '**/law/**/*.docx']
     }
   },
