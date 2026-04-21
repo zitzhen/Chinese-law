@@ -7,8 +7,8 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">法律法规</a></li>
+            <li><RouterLink to="/">首页</RouterLink></li>
+            <li><RouterLink to="/all-law">法律法规</RouterLink></li>
             <li><a href="#">司法解释</a></li>
             <li><a href="#">法律动态</a></li>
             <li><a href="#">关于我们</a></li>
@@ -21,8 +21,14 @@
       <div class="container">
         <div class="search-box">
           <h2>查询中国现行法律法规</h2>
-          <input type="text" class="search-input" placeholder="输入法律名称、关键词或条文内容...">
-          <button class="search-btn">搜索</button>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="输入法律名称、关键词或条文内容..."
+            v-model="keyword"
+            @keyup.enter="search"
+          >
+          <button class="search-btn" @click="search">搜索</button>
         </div>
       </div>
     </section>
@@ -32,73 +38,73 @@
         <div class="category-card">
           <div class="category-header">宪法及相关法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国宪法/">中华人民共和国宪法</a></li>
-            <li><a href="law/中华人民共和国立法法/">立法法</a></li>
-            <li><a href="law/中华人民共和国选举法/">选举法</a></li>
-            <li><a href="law/中华人民共和国国旗法/">国旗法</a></li>
-            <li><a href="law/中华人民共和国国徽法/">国徽法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国宪法')">中华人民共和国宪法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国立法法')">立法法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国选举法')">选举法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国国旗法')">国旗法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国国徽法')">国徽法</RouterLink></li>
           </ul>
         </div>
         
         <div class="category-card">
           <div class="category-header">民法商法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国民法典/">民法典</a></li>
-            <li><a href="law/中华人民共和国公司法/">公司法</a></li>
-            <li><a href="law/中华人民共和国商标法/">商标法</a></li>
-            <li><a href="law/中华人民共和国专利法/">专利法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国民法典')">民法典</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国公司法')">公司法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国商标法')">商标法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国专利法')">专利法</RouterLink></li>
           </ul>
         </div>
         
         <div class="category-card">
           <div class="category-header">行政法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国行政处罚法/">行政处罚法</a></li>
-            <li><a href="law/中华人民共和国行政许可法/">行政许可法</a></li>
-            <li><a href="law/中华人民共和国行政复议法/">行政复议法</a></li>
-            <li><a href="law/中华人民共和国公务员法/">公务员法</a></li>
-            <li><a href="law/中华人民共和国治安管理处罚法/">治安管理处罚法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国行政处罚法')">行政处罚法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国行政许可法')">行政许可法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国行政复议法')">行政复议法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国公务员法')">公务员法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国治安管理处罚法')">治安管理处罚法</RouterLink></li>
           </ul>
         </div>
         
         <div class="category-card">
           <div class="category-header">经济法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国反垄断法/">反垄断法</a></li>
-            <li><a href="law/中华人民共和国消费者权益保护法/">消费者权益保护法</a></li>
-            <li><a href="law/中华人民共和国税收征收管理法/">税法</a></li>
-            <li><a href="law/中华人民共和国银行业监督管理法/">银行法</a></li>
-            <li><a href="law/中华人民共和国证券法/">证券法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国反垄断法')">反垄断法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国消费者权益保护法')">消费者权益保护法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国税收征收管理法')">税法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国银行业监督管理法')">银行法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国证券法')">证券法</RouterLink></li>
           </ul>
         </div>
         
         <div class="category-card">
           <div class="category-header">社会法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国劳动法/">劳动法</a></li>
-            <li><a href="law/中华人民共和国劳动合同法/">劳动合同法</a></li>
-            <li><a href="law/中华人民共和国社会保险法/">社会保险法</a></li>
-            <li><a href="law/中华人民共和国未成年人保护法/">未成年人保护法</a></li>
-            <li><a href="law/中华人民共和国妇女权益保障法/">妇女权益保障法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国劳动法')">劳动法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国劳动合同法')">劳动合同法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国社会保险法')">社会保险法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国未成年人保护法')">未成年人保护法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国妇女权益保障法')">妇女权益保障法</RouterLink></li>
           </ul>
         </div>
         
         <div class="category-card">
           <div class="category-header">刑法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国刑法/">中华人民共和国刑法</a></li>
-            <li><a href="law/中华人民共和国反洗钱法/">反洗钱法</a></li>
-            <li><a href="law/中华人民共和国国家安全法/">国家安全法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国刑法')">中华人民共和国刑法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国反洗钱法')">反洗钱法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国国家安全法')">国家安全法</RouterLink></li>
           </ul>
         </div>
         
         <div class="category-card">
           <div class="category-header">诉讼与非诉讼程序法</div>
           <ul class="category-list">
-            <li><a href="law/中华人民共和国刑事诉讼法/">刑事诉讼法</a></li>
-            <li><a href="law/中华人民共和国民事诉讼法/">民事诉讼法</a></li>
-            <li><a href="law/中华人民共和国行政诉讼法/">行政诉讼法</a></li>
-            <li><a href="law/中华人民共和国仲裁法/">仲裁法</a></li>
+            <li><RouterLink :to="lawLink('中华人民共和国刑事诉讼法')">刑事诉讼法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国民事诉讼法')">民事诉讼法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国行政诉讼法')">行政诉讼法</RouterLink></li>
+            <li><RouterLink :to="lawLink('中华人民共和国仲裁法')">仲裁法</RouterLink></li>
           </ul>
         </div>
       </section>
@@ -129,8 +135,25 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  setup() {
+    const router = useRouter()
+    const keyword = ref('')
+    const lawLink = (name) => ({ name: 'LawDetail', params: { name } })
+    const search = () => {
+      router.push({ name: 'law', query: { keyword: keyword.value.trim() } })
+    }
+
+    return {
+      keyword,
+      lawLink,
+      search
+    }
+  }
 }
 </script>
 

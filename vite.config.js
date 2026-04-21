@@ -4,6 +4,11 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    watch: {
+      ignored: ['**/dist/**', '**/law/**/*.pdf', '**/law/**/*.docx']
+    }
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
