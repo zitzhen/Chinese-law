@@ -4,9 +4,10 @@
   "description": "Chinese-law，全称为ZIT-Chinese-law，提供 中华人民共和国 所有法律的查询，目前正在收入中，未来开发网页以供访问",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +22,7 @@
   },
   "homepage": "https://github.com/zitzhen/Chinese-law#readme",
   "dependencies": {
-    "@vitejs/plugin-vue": "^6.0.1",
-    "vite": "^7.1.7",
-    "vue": "^3.5.21",
-    "vue-router": "^4.5.1"
+    "nuxt": "^4.1.2",
+    "vue": "^3.5.21"
   }
 }
