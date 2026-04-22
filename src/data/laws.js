@@ -86,7 +86,12 @@ export const getLawMarkdown = async (name) => {
     return ''
   }
 
-  return law.readmeLoader()
+  try {
+    return await law.readmeLoader()
+  } catch (error) {
+    console.warn(`Failed to load markdown for ${name}`, error)
+    return ''
+  }
 }
 
 export const getRelatedLaws = (lawName, limit = 6) => {
