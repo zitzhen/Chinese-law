@@ -14,6 +14,9 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     }
   },
+  routeRules: {
+    '/law/**': { prerender: false }
+  },
   vite: {
     server: {
       watch: {

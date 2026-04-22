@@ -137,6 +137,10 @@
 <script setup>
 import { ref } from 'vue'
 
+useHead({
+  title: 'ZIT小圳创科工作室·中国现行法律查询系统'
+})
+
 const router = useRouter()
 const keyword = ref('')
 const lawLink = (name) => `/law/${encodeURIComponent(name)}`

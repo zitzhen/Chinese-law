@@ -102,8 +102,8 @@ import { getLawByName, getLawMarkdown, getRelatedLaws } from '@/data/laws'
 import { renderMarkdown } from '@/utils/markdown'
 
 const route = useRoute()
-const loading = ref(true)
 const markdown = ref('')
+const loading = ref(false)
 const lawLink = (name) => `/law/${encodeURIComponent(name)}`
 
 const lawName = computed(() => {
@@ -114,14 +114,25 @@ const law = computed(() => getLawByName(lawName.value))
 const content = computed(() => renderMarkdown(markdown.value))
 const relatedLaws = computed(() => getRelatedLaws(lawName.value))
 
+useHead(() => ({
+  title: law.value
+    ? `${law.value.name} - 中国现行法律查询系统`
+    : '法律详情 - 中国现行法律查询系统'
+}))
+
+const loadMarkdown = async (name) => {
+  loading.value = true
+  markdown.value = await getLawMarkdown(name)
+  loading.value = false
+}
+
+await loadMarkdown(lawName.value)
+
 watch(
   lawName,
   async (name) => {
-    loading.value = true
-    markdown.value = await getLawMarkdown(name)
-    loading.value = false
-  },
-  { immediate: true }
+    await loadMarkdown(name)
+  }
 )
 </script>
 

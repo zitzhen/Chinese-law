@@ -127,6 +127,10 @@
 import { computed, reactive, ref, watch } from 'vue'
 import { laws as localLaws, lawCategories } from '@/data/laws'
 
+useHead({
+  title: '全部法律法规 - 中国现行法律查询系统'
+})
+
 const route = useRoute()
 const laws = ref(localLaws)
 const loading = ref(false)
