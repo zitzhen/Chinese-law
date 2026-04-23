@@ -11,7 +11,7 @@
             <li><NuxtLink to="/all-law">法律法规</NuxtLink></li>
             <li><a href="#">司法解释</a></li>
             <li><a href="#">法律动态</a></li>
-            <li><a href="#">关于我们</a></li>
+            <li><NuxtLink to="/about">关于我们</NuxtLink></li>
           </ul>
         </nav>
       </div>
@@ -122,7 +122,7 @@
     <footer>
       <div class="container">
         <div class="footer-links">
-          <a href="#">关于我们</a>
+          <NuxtLink to="/about">关于我们</NuxtLink>
           <a href="#">联系方式</a>
           <a href="#">网站地图</a>
           <a href="#">法律声明</a>
